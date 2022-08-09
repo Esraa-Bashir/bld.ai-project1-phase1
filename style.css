@@ -11,6 +11,10 @@
     overflow: hidden;
     
 
+
+}
+.small-bar{
+  display: none;
 }
 .udemy-logo {
 
@@ -20,8 +24,9 @@
 }
 .category {
     color: black;
-    font-size: 14px;
-    margin-left: -1.5%;
+    font-size: 90%;
+    margin-left: -2%;
+    margin-top: -1%;
 }
 
 .search-bar{
@@ -64,7 +69,7 @@ input{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 90%;
     margin-left: -1.5%;
     
 }
@@ -75,53 +80,73 @@ input{
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 14px;
+    font-size: 90%;
     margin-left: -1.5%;
     
 }
 .cart-logo {
-   margin: 1% 1%;
+    margin: 1% 1%;
     margin-left: -1.5%;
 }
 
+/*.logging{
+  margin-left: -2.5%
+}*/
 .login-button {
-    height: 2.5rem;
+    height: 40px;
     width: 5rem;
     border-style: solid;
     border-width: 1px;
     background-color: white;
     color: black;
     font-weight: bold;
-    font-size : 16px;
+    font-size : 100%;
     align-items: center;
     display: inline-block;
-    margin-left: -5%;
+    margin-left: -10%;
+    margin-top:-1%
+    /*margin-right: 1.5%;*/
     
 }
 .signup-button {
-    height: 2.5rem;
+    height: 40px;
     width: 5rem;
     border-style: solid;
     border-width: 1px;
     background-color: black;
     color: white;
     font-weight: bold;
-    font-size : 16px;
+    font-size : 100%;
     align-items: center;
     display: inline-block;
-    margin-left: -1.5%;
+    margin-left: 0%;
+    margin-right: 1%;
     
 
 }
-.language{
+.language  {
     padding: 2%;
-    height: 1.8rem;
+    height: 30px;
     width: 1.5rem;
     border-style: solid;
     border-width: 1px;
     display: inline-block;
 }
+.languague img{
+   margin-top : 3%;
+   margin-left:3%;
+   position : center;
+}
 
+.small-search-icon{
+  padding: 2%;
+  margin-right: -35%;
+  
+}
+.small-cart-logo{
+  padding: 2%;
+  
+}
 /***** Header ***************/
 .header-image{
     /*margin: 3%;
@@ -288,3 +313,53 @@ input{
   .NoBestSeller {
     display: none;
   }
+  @media screen and (max-width:1100px){
+    .udemy-business{
+      display: none;
+    }
+    .header-image img{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:1000px){
+    .udemy-teach{
+      display: none;
+    }
+    .header-image img{
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width:800px){
+    .Nav-bar{
+      display: none;
+    }
+    
+    
+    .header-text {
+      position: static;
+      display: block;
+      justify-content: left;
+      width:100%;
+      height: 100%;
+      box-shadow: none;
+    }
+    .header-image img{
+      width: 100%;
+    }
+    .small-bar{
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width:100%;
+    }
+    .all-courses {
+      flex-direction: column;
+    }
+    .one-course{
+      width:50%;
+    }
+  }
+  
