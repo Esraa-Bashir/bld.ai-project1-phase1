@@ -1,7 +1,6 @@
 const con = document.createElement("div");
 con.className ="courses";
 let courseFormat="";
-con.innerHTML =`<h3>hello</h3>`;
 fetch("python_res.json")
 .then(res => res.json())
 .then(data => {
