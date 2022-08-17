@@ -1,19 +1,23 @@
-const con = document.createElement("div");
-con.className ="courses";
+const cors = document.createElement("div");
+cors.className ="courses";
 let courseFormat="";
-fetch("python_res.json")
-.then(res => res.json())
-.then(data => {
-    con.innerHTML = `
-        <h2 >${data.header}</h2>
-        <p>${data.description}</p>
-        <button class="explore-button ">Explore Python</button>
-        
-        
-    `;
-    data.courses.forEach((course) => {
+cors.innerHTML = `
+        <h2 >Expand your career opportunities with Python</h2>
+        <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly
+         useful language.Its simple syntax and readability makes Python perfect for Flask, Django, 
+         data science,and machine learning. You’ll learn how to build everything from games to sites to apps.
+         Choose from a range of courses that will appeal to both beginners and advanced developers alike.</p>
+        <button class="explore-button ">Explore Python</button>  
+    `; 
+//con.innerHTML =`<h3>hello</h3>`;
+//const link = "http://localhost:3000/courses";
+const link = "http://localhost:3000/courses";
+fetch(link)
+      .then(res => res.json())
+      .then(data => data.forEach((course) => Generator(course)));
 
-        courseFormat += `
+function Generator(course) {
+    courseFormat += `
         <div class="only-one-course" >
         <div class="course-img">
         <img  src="${course.image}" />
@@ -37,12 +41,13 @@ fetch("python_res.json")
         </div>
         
         `;
-      });
-    con.innerHTML += `
-    <div class="all-courses" >
-        ${courseFormat}
-        </div>
-       
-    `;
-});
-document.body.appendChild(con);
+
+
+}
+
+cors.innerHTML += `
+<div class="all-courses" >
+    ${courseFormat}
+    </div>
+`;
+document.body.appendChild(cors);
